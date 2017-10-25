@@ -40,6 +40,15 @@ public class MappingProperties {
     @NestedConfigurationProperty
     private TimeoutProperties timeout = new TimeoutProperties();
 
+    public MappingProperties() {
+    }
+
+    public MappingProperties(String name, String path, List<String> destinations) {
+        this.name = name;
+        this.path = path;
+        this.destinations = destinations;
+    }
+
     public String getName() {
         return name;
     }
